@@ -2,8 +2,10 @@ const {Schema,model} = require("mongoose");
 
 const UserSchema = new Schema({
    name:{type:String,required:true},
-   score:{total:{type:Number,default:0},scores:[]}
+   score:{type:Number,default:0},
+   correct:[],
+   incorrect:[]
 })
 
-const UserModel = new model("score",UserSchema);
+const UserModel = new model("user",UserSchema);
 module.exports = UserModel;
